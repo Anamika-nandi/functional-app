@@ -2,13 +2,11 @@ import "./App.css";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Clients from "./pages/home/Clients";
 import Testimonials from "./pages/home/Testimonials";
-// import Faq from "./pages/home/Faq";
-// import FooterIcon from "./pages/home/FooterIcon";
-// import Footer from "./pages/home/Footer";
 import Nav from "./pages/home/Nav";
 import { theme } from "./theme";
 import FeatureSection from "./pages/home/FeatureSection";
 import FaqSection from "./pages/home/FaqSection";
+import Footer from "./pages/home/Footer";
 function App() {
   return (
     <Box>
@@ -20,8 +18,7 @@ function App() {
         <FeatureSection />
         <Testimonials />
         <FaqSection />
-        {/* <FooterIcon /> */}
-        {/* <Footer /> */}
+        <Footer />
       </ChakraProvider>
     </Box>
   );
