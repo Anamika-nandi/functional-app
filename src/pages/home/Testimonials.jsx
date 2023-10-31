@@ -47,7 +47,23 @@ export default function Testimonials() {
         Testimonials
       </Text>
       <HStack mt="4" justify="center" w="full">
-        <Box overflow="hidden" overflowX="auto" overscrollX="hidden">
+        <Box
+          overflow="hidden"
+          overflowX="auto"
+          overscrollX="hidden"
+          css={{
+            "&::-webkit-scrollbar": {
+              width: "4px",
+            },
+            "&::-webkit-scrollbar-track": {
+              width: "6px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "transparent",
+              borderRadius: "24px",
+            },
+          }}
+        >
           <Flex
             gap={{
               base: 4,
