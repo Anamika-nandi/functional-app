@@ -8,6 +8,7 @@ import Clients from "./pages/home/Clients";
 // import Footer from "./pages/home/Footer";
 import Nav from "./pages/home/Nav";
 import { theme } from "./theme";
+import HeroSec from "./pages/home/HeroSec";
 function App() {
   return (
     <Box>
@@ -15,6 +16,7 @@ function App() {
         <Nav />
         {/* 
         <Home /> */}
+        <HeroSec />
         <Clients />
         {/* <FeaturesSec /> */}
         {/* <Testimonials /> */}
