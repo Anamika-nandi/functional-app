@@ -1,4 +1,5 @@
 import { Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import FooterIcon from "./FooterIcon";
 
 export default function Footer() {
   const footerText = [
@@ -25,22 +26,25 @@ export default function Footer() {
     },
   ];
   return (
-    <Box bg="#2B2B2B" pt="8" pb="14">
-      <VStack>
-        <Image src="./images/logo.png" bg="#2B2B2B" />
-      </VStack>
-      <HStack justify="center" gap="14" pt="4">
-        {footerText.map((text) => (
-          <VStack key={text.id} color="white">
-            <Text fontSize="xl" fontWeight="semibold">
-              {text.header}
-            </Text>
-            <Text fontSize="md">{text.text1}</Text>
-            <Text fontSize="md">{text.text2}</Text>
-            <Text fontSize="md">{text.text3}</Text>
-          </VStack>
-        ))}
-      </HStack>
-    </Box>
+    <>
+      <FooterIcon />
+      <Box bg="#2B2B2B" pt="8" pb="14">
+        <VStack>
+          <Image src="./images/logo.png" bg="#2B2B2B" />
+        </VStack>
+        <HStack justify="center" gap="14" pt="8" flexWrap="wrap" px="4">
+          {footerText.map((text) => (
+            <VStack key={text.id} color="white">
+              <Text fontSize="xl" fontWeight="semibold">
+                {text.header}
+              </Text>
+              <Text fontSize="md">{text.text1}</Text>
+              <Text fontSize="md">{text.text2}</Text>
+              <Text fontSize="md">{text.text3}</Text>
+            </VStack>
+          ))}
+        </HStack>
+      </Box>
+    </>
   );
 }

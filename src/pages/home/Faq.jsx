@@ -40,7 +40,13 @@ export default function Faq() {
     <Box>
       <Accordion>
         {faqText.map((text) => (
-          <AccordionItem key={text.id}>
+          <AccordionItem
+            key={text.id}
+            borderTop="none"
+            borderBottom="1px solid"
+            borderBottomColor="#09AEAF"
+            bg="transparent"
+          >
             {({ isExpanded }) => (
               <>
                 <AccordionButton>
@@ -62,10 +68,14 @@ export default function Faq() {
                 </AccordionButton>
 
                 <AccordionPanel
-                  pb={4}
+                  py="8"
                   color="#3C3C43D9"
                   fontSize="md"
                   textAlign="start"
+                  pr={{
+                    base: 0,
+                    md: 24,
+                  }}
                 >
                   {text.text}
                 </AccordionPanel>
