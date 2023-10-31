@@ -36,7 +36,7 @@ const Nav = () => {
   ];
 
   return (
-    <Box bg="#FBFBFB" boxShadow="md">
+    <Box bg="#FBFBFB" boxShadow="md" position="sticky" top="0" zIndex="sticky">
       <Container
         maxW="container.xl"
         display={{
