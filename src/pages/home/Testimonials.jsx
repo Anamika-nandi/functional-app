@@ -1,4 +1,13 @@
-import { Box, Grid, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Grid,
+  HStack,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 export default function Testimonials() {
   const testimonialsText = [
@@ -34,24 +43,27 @@ export default function Testimonials() {
     },
   ];
   return (
-    <VStack mt="12" maxW="1920px">
-      <Text fontWeight="medium" fontSize="3xl">
+    <Container mt="12" maxW="container.xl">
+      <Text fontWeight="medium" fontSize="3xl" textAlign="center">
         Testimonials
       </Text>
-      <HStack mt="4">
-        <Box
-          overflow="hidden"
-          overflowX="auto"
-          maxW="1200px"
-          overscrollX="hidden"
-        >
-          <Grid grid templateColumns="repeat(7, 1fr)" gap="6">
+      <HStack mt="4" justify="center" w="full">
+        <Box overflow="hidden" overflowX="auto" overscrollX="hidden">
+          <Flex
+            gap={{
+              base: 4,
+              md: 8,
+            }}
+          >
             {testimonialsText.map((text) => (
               <VStack
                 key={text.id}
                 bg="#09AEAF"
                 borderRadius="2xl"
-                w="350px"
+                minW={{
+                  base: "320px",
+                  md: "390px",
+                }}
                 p="8"
                 alignItems="flex-start"
               >
@@ -66,9 +78,9 @@ export default function Testimonials() {
                 </Text>
               </VStack>
             ))}
-          </Grid>
+          </Flex>
         </Box>
       </HStack>
-    </VStack>
+    </Container>
   );
 }

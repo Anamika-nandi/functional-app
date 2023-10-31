@@ -1,8 +1,7 @@
 import "./App.css";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Clients from "./pages/home/Clients";
-// import FeaturesSec from "./pages/home/FeaturesSec";
-// import Testimonials from "./pages/home/Testimonials";
+import Testimonials from "./pages/home/Testimonials";
 // import Faq from "./pages/home/Faq";
 // import FooterIcon from "./pages/home/FooterIcon";
 // import Footer from "./pages/home/Footer";
@@ -18,8 +17,7 @@ function App() {
         <Home /> */}
         <Clients />
         <FeatureSection />
-        {/* <FeaturesSec /> */}
-        {/* <Testimonials /> */}
+        <Testimonials />
         {/* <Box mt="12">
           <Heading fontWeight="medium" fontSize="3xl">
             Frequently Asked Questions
