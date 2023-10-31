@@ -1,5 +1,4 @@
 import { Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import React from "react";
 
 export default function Footer() {
   const footerText = [
@@ -31,7 +30,7 @@ export default function Footer() {
         <Image src="./images/footer-logo.svg" bg="#2B2B2B" />
       </VStack>
       <HStack justify="center" gap="14" pt="4">
-        {footerText.map((text, i) => (
+        {footerText.map((text) => (
           <VStack key={text.id} color="white">
             <Text fontSize="xl" fontWeight="semibold">
               {text.header}

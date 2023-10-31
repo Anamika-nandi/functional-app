@@ -1,5 +1,4 @@
-import { Box, Flex, HStack, Img, Stack, VStack } from "@chakra-ui/react";
-import React from "react";
+import { HStack, Img } from "@chakra-ui/react";
 
 export default function FooterIcon() {
   const footerIcon = [

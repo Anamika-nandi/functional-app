@@ -1,5 +1,4 @@
 import { Box, HStack, Heading, Image, Stack, VStack } from "@chakra-ui/react";
-import React from "react";
 
 export default function Clients() {
   const clientLogo = [

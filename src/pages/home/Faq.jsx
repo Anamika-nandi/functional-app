@@ -1,13 +1,11 @@
 import {
   Accordion,
   AccordionButton,
-  AccordionIcon,
   AccordionItem,
   AccordionPanel,
   Box,
 } from "@chakra-ui/react";
 
-import React from "react";
 import { AddIcon, CloseIcon } from "@chakra-ui/icons";
 
 export default function Faq() {
@@ -42,7 +40,7 @@ export default function Faq() {
     <Box>
       <Accordion>
         {faqText.map((text) => (
-          <AccordionItem>
+          <AccordionItem key={text.id}>
             {({ isExpanded }) => (
               <>
                 <AccordionButton>
@@ -57,9 +55,9 @@ export default function Faq() {
                     {text.header}
                   </Box>
                   {isExpanded ? (
-                    <CloseIcon fontSize="12px" />
+                    <CloseIcon fontSize="xs" />
                   ) : (
-                    <AddIcon fontSize="12px" />
+                    <AddIcon fontSize="xs" />
                   )}
                 </AccordionButton>
 
@@ -67,7 +65,6 @@ export default function Faq() {
                   pb={4}
                   color="#3C3C43D9"
                   fontSize="md"
-                  pr="52"
                   textAlign="start"
                 >
                   {text.text}

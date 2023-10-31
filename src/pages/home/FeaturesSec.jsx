@@ -1,15 +1,4 @@
-import {
-  Box,
-  Center,
-  Flex,
-  HStack,
-  Heading,
-  Image,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import React from "react";
+import { HStack, Heading, Image, Text, VStack } from "@chakra-ui/react";
 
 export default function FeaturesSec() {
   const featuresText = [
@@ -47,7 +36,7 @@ export default function FeaturesSec() {
           mt="4"
           h="280px"
         >
-          {featuresText.map((text, i) => (
+          {featuresText.map((text) => (
             <VStack key={text.id} flex="1">
               <Image src={text.icon} w="16" h="16" />
               <Text fontWeight="bold" fontSize="xl">
@@ -75,7 +64,7 @@ export default function FeaturesSec() {
           h="280px"
           justifyContent="center"
         >
-          {usText.map((text, i) => (
+          {usText.map((text) => (
             <HStack key={text.id} alignItems="flex-start">
               <Image src="./images/us-icon.svg" w="6" h="6" />
               <Text fontSize="xl" color="white" pl="1.5">
