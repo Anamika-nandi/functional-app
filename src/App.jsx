@@ -1,5 +1,5 @@
 import "./App.css";
-import { Box, ChakraProvider, HStack, Heading, Stack } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import Clients from "./pages/home/Clients";
 // import FeaturesSec from "./pages/home/FeaturesSec";
 // import Testimonials from "./pages/home/Testimonials";
@@ -8,6 +8,7 @@ import Clients from "./pages/home/Clients";
 // import Footer from "./pages/home/Footer";
 import Nav from "./pages/home/Nav";
 import { theme } from "./theme";
+import FeatureSection from "./pages/home/FeatureSection";
 function App() {
   return (
     <Box>
@@ -16,6 +17,7 @@ function App() {
         {/* 
         <Home /> */}
         <Clients />
+        <FeatureSection />
         {/* <FeaturesSec /> */}
         {/* <Testimonials /> */}
         {/* <Box mt="12">
