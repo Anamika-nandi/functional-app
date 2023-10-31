@@ -1,29 +1,21 @@
-import { useState } from "react";
 import "./App.css";
-import {
-  Box,
-  ChakraProvider,
-  HStack,
-  Heading,
-  Stack,
-  theme,
-} from "@chakra-ui/react";
+import { Box, ChakraProvider, HStack, Heading, Stack } from "@chakra-ui/react";
 import Clients from "./pages/home/Clients";
 import FeaturesSec from "./pages/home/FeaturesSec";
 import Testimonials from "./pages/home/Testimonials";
 import Faq from "./pages/home/Faq";
 import FooterIcon from "./pages/home/FooterIcon";
 import Footer from "./pages/home/Footer";
-
+import Nav from "./pages/home/Nav";
+import { theme } from "./theme";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Box>
       <ChakraProvider theme={theme}>
-        {/* <Nav />
+        <Nav />
+        {/* 
         <Home /> */}
-        <Clients />
+        {/* <Clients />
         <FeaturesSec />
         <Testimonials />
         <Box mt="12">
@@ -40,7 +32,7 @@ function App() {
           </HStack>
         </Box>
         <FooterIcon />
-        <Footer />
+        <Footer /> */}
       </ChakraProvider>
     </Box>
   );

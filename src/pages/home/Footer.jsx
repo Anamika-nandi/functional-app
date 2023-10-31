@@ -27,7 +27,7 @@ export default function Footer() {
   return (
     <Box bg="#2B2B2B" pt="8" pb="14">
       <VStack>
-        <Image src="./images/footer-logo.svg" bg="#2B2B2B" />
+        <Image src="./images/logo.png" bg="#2B2B2B" />
       </VStack>
       <HStack justify="center" gap="14" pt="4">
         {footerText.map((text) => (
