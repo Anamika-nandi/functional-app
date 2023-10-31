@@ -19,6 +19,7 @@ const Nav = () => {
     {
       name: "Home",
       url: "#",
+      isActive: true,
     },
     {
       name: "FAQ",
@@ -50,7 +51,13 @@ const Nav = () => {
           <HStack spacing="4">
             <HStack spacing="4">
               {links.map((link) => (
-                <Link fontSize="lg" key={link.name} href={link.url}>
+                <Link
+                  fontSize="lg"
+                  fontWeight="medium"
+                  color={link.isActive ? "#09AEAF" : "black"}
+                  key={link.name}
+                  href={link.url}
+                >
                   {link.name}
                 </Link>
               ))}
@@ -88,7 +95,13 @@ const Nav = () => {
           <Stack spacing="4" py="4">
             <Stack spacing="4">
               {links.map((link) => (
-                <Link fontSize="lg" key={link.name} href={link.url}>
+                <Link
+                  fontSize="lg"
+                  fontWeight="medium"
+                  color={link.isActive ? "#09AEAF" : "black"}
+                  key={link.name}
+                  href={link.url}
+                >
                   {link.name}
                 </Link>
               ))}
