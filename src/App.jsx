@@ -13,8 +13,7 @@ function App() {
     <Box>
       <ChakraProvider theme={theme}>
         <Nav />
-        {/* 
-        <Home /> */}
+
         <HeroSec />
         <Clients />
         <FeatureSection />
