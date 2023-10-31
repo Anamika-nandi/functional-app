@@ -1,11 +1,11 @@
 import "./App.css";
 import { Box, ChakraProvider, HStack, Heading, Stack } from "@chakra-ui/react";
 import Clients from "./pages/home/Clients";
-import FeaturesSec from "./pages/home/FeaturesSec";
-import Testimonials from "./pages/home/Testimonials";
-import Faq from "./pages/home/Faq";
-import FooterIcon from "./pages/home/FooterIcon";
-import Footer from "./pages/home/Footer";
+// import FeaturesSec from "./pages/home/FeaturesSec";
+// import Testimonials from "./pages/home/Testimonials";
+// import Faq from "./pages/home/Faq";
+// import FooterIcon from "./pages/home/FooterIcon";
+// import Footer from "./pages/home/Footer";
 import Nav from "./pages/home/Nav";
 import { theme } from "./theme";
 function App() {
@@ -15,10 +15,10 @@ function App() {
         <Nav />
         {/* 
         <Home /> */}
-        {/* <Clients />
-        <FeaturesSec />
-        <Testimonials />
-        <Box mt="12">
+        <Clients />
+        {/* <FeaturesSec /> */}
+        {/* <Testimonials /> */}
+        {/* <Box mt="12">
           <Heading fontWeight="medium" fontSize="3xl">
             Frequently Asked Questions
           </Heading>
@@ -30,9 +30,9 @@ function App() {
               <Faq />
             </Stack>
           </HStack>
-        </Box>
-        <FooterIcon />
-        <Footer /> */}
+        </Box> */}
+        {/* <FooterIcon /> */}
+        {/* <Footer /> */}
       </ChakraProvider>
     </Box>
   );

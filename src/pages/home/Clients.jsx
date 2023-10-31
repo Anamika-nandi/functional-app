@@ -1,4 +1,4 @@
-import { Box, HStack, Heading, Image, Stack, VStack } from "@chakra-ui/react";
+import { Box, HStack, Heading, Image, Stack } from "@chakra-ui/react";
 
 export default function Clients() {
   const clientLogo = [
@@ -11,23 +11,43 @@ export default function Clients() {
   ];
   return (
     <Box mt="6">
-      <Stack bg="#09AEAF0F" mx="auto" w="full" gap="2" p="8">
-        <Heading fontWeight="medium" fontSize="3xl">
+      <Stack
+        bg="#09AEAF0F"
+        mx="auto"
+        w="full"
+        gap="2"
+        py="8"
+        borderRadius={{
+          base: "none",
+          md: "2xl",
+        }}
+      >
+        <Heading
+          fontWeight="medium"
+          w="full"
+          textAlign="center"
+          fontSize={{
+            base: "2xl",
+            md: "3xl",
+          }}
+        >
           Our Clients
         </Heading>
-        <VStack>
-          <HStack>
-            {clientLogo.map((logos, index) => (
-              <Image
-                key={index}
-                src={logos.logo}
-                h="20"
-                w="170px"
-                opacity="0.6"
-              />
-            ))}
-          </HStack>
-        </VStack>
+        <HStack justify="center" flexWrap="wrap">
+          {clientLogo.map((logos, index) => (
+            <Image
+              key={index}
+              src={logos.logo}
+              h="20"
+              w={{
+                base: "120px",
+                md: "140px",
+                lg: "160px",
+              }}
+              opacity="0.6"
+            />
+          ))}
+        </HStack>
       </Stack>
     </Box>
   );
