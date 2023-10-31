@@ -67,7 +67,7 @@ export default function Testimonials() {
                 alignItems="flex-start"
               >
                 <HStack>
-                  <Image src="./images/testimoni-icon.svg" h="8" w="8" />
+                  <Image src="/images/testimonial-icon.svg" h="8" w="8" />
                   <Text fontSize="2xl" fontWeight="semibold" color="white">
                     {text.header}
                   </Text>
