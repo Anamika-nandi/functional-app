@@ -2,7 +2,6 @@ import {
   Box,
   Container,
   Flex,
-  Grid,
   HStack,
   Image,
   Text,

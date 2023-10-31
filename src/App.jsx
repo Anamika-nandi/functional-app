@@ -8,6 +8,7 @@ import Testimonials from "./pages/home/Testimonials";
 import Nav from "./pages/home/Nav";
 import { theme } from "./theme";
 import FeatureSection from "./pages/home/FeatureSection";
+import FaqSection from "./pages/home/FaqSection";
 function App() {
   return (
     <Box>
@@ -18,19 +19,7 @@ function App() {
         <Clients />
         <FeatureSection />
         <Testimonials />
-        {/* <Box mt="12">
-          <Heading fontWeight="medium" fontSize="3xl">
-            Frequently Asked Questions
-          </Heading>
-          <HStack mt="6" spacing="12">
-            <Stack flex="1">
-              <Faq />
-            </Stack>
-            <Stack flex="1">
-              <Faq />
-            </Stack>
-          </HStack>
-        </Box> */}
+        <FaqSection />
         {/* <FooterIcon /> */}
         {/* <Footer /> */}
       </ChakraProvider>
