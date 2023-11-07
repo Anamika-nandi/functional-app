@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { AiFillCaretDown } from "react-icons/ai";
+import Summary from "../pages/home/Summary/Summary";
 const PokerTabs = () => {
   const CustomTab = React.forwardRef((props, ref) => {
     const tabProps = useTab({ ...props, ref });
@@ -53,7 +54,7 @@ const PokerTabs = () => {
   const tabs = [
     {
       name: "1",
-      component: <></>,
+      component: <Summary />,
     },
     {
       name: "2",
@@ -85,15 +86,9 @@ const PokerTabs = () => {
         </TabList>
       </Flex>
       <TabPanels>
-        <TabPanel>
-          <p>one!</p>
-        </TabPanel>
-        <TabPanel>
-          <p>two!</p>
-        </TabPanel>
-        <TabPanel>
-          <p>three!</p>
-        </TabPanel>
+        {tabs.map((tab) => (
+          <TabPanel key={tab.name}>{tab.component}</TabPanel>
+        ))}
       </TabPanels>
     </Tabs>
   );
