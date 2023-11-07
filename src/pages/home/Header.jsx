@@ -5,10 +5,10 @@ import {
   HStack,
   Stack,
   Text,
-  Link as CLink,
+  //   Link as CLink,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-
+import { ReactComponent as Logo } from "../../assets/brand.svg";
 const Header = () => {
   const url = [
     {
@@ -28,7 +28,9 @@ const Header = () => {
   return (
     <Container maxW="full" px="0">
       <Flex justify="space-between" px="4">
-        <Box>Logo</Box>
+        <Box>
+          <Logo />
+        </Box>
 
         <Stack spacing="3" mb="8" align="end">
           <HStack
@@ -59,7 +61,7 @@ const Header = () => {
         <HStack>
           {url.map((item) => (
             <Link key={item.link} to={item.link}>
-              <CLink fontWeight="bold">{item.name}</CLink>
+              {item.name}
             </Link>
           ))}
         </HStack>
