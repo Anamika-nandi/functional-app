@@ -8,7 +8,8 @@ import {
   //   Link as CLink,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../../assets/brand.svg";
+import Logo from "../../icons/Logo";
+
 const Header = () => {
   const url = [
     {
@@ -29,7 +30,7 @@ const Header = () => {
     <Container maxW="full" px="0">
       <Flex justify="space-between" px="4">
         <Box>
-          <Logo />
+          <Logo width="160px" height="80px" />
         </Box>
 
         <Stack spacing="3" mb="8" align="end">
