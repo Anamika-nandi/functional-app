@@ -1,25 +1,19 @@
-import "./App.css";
-import { ChakraProvider } from "@chakra-ui/react";
-import Clients from "./pages/home/Clients";
-import Testimonials from "./pages/home/Testimonials";
-import Nav from "./pages/home/Nav";
-import { theme } from "./theme";
-import Hero from "./pages/home/Hero";
-import FeatureSection from "./pages/home/FeatureSection";
-import FaqSection from "./pages/home/FaqSection";
-import Footer from "./pages/home/Footer";
-function App() {
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/home/Home";
+import { ChakraProvider, theme } from "@chakra-ui/react";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
+const App = () => {
   return (
     <ChakraProvider theme={theme}>
-      <Nav />
-      <Hero />
-      <Clients />
-      <FeatureSection />
-      <Testimonials />
-      <FaqSection />
-      <Footer />
+      <RouterProvider router={router} />
     </ChakraProvider>
   );
-}
+};
 
 export default App;

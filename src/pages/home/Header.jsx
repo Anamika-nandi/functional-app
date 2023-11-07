@@ -1,4 +1,12 @@
-import { Box, Container, Flex, HStack, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  HStack,
+  Stack,
+  Text,
+  Link as CLink,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -18,29 +26,40 @@ const Header = () => {
   ];
 
   return (
-    <Container maxW="container.xl">
-      <Flex justify="space-between">
+    <Container maxW="full" px="0">
+      <Flex justify="space-between" px="4">
         <Box>Logo</Box>
 
-        <Stack spacing="8">
-          <HStack bg="green.800" borderBottomRadius="2xl">
+        <Stack spacing="3" mb="8" align="end">
+          <HStack
+            bg="green.800"
+            borderBottomRadius="2xl"
+            color="white"
+            px="4"
+            fontSize="sm"
+            py="3"
+            pr="24"
+            fontWeight="bold"
+          >
             <Text> Players Online:3177</Text>
             <Text>Caribbean Stud ($5) $55,472.31</Text>
           </HStack>
 
           <Box>
-            <Text>Thu 28th Jan 2024 14:30:15 PokerCity.com Time</Text>
+            <Text fontSize="sm">
+              Thu 28th Jan 2024 14:30:15 PokerCity.com Time
+            </Text>
           </Box>
         </Stack>
       </Flex>
 
-      <HStack px="4" py="2" color="white" bg="black">
-        <Text>Firstname Lastname</Text>
+      <HStack px="6" py="4" color="white" bg="black" justify="space-between">
+        <Text fontWeight="bold">Firstname Lastname</Text>
 
         <HStack>
           {url.map((item) => (
             <Link key={item.link} to={item.link}>
-              <Text>{item.name}</Text>
+              <CLink fontWeight="bold">{item.name}</CLink>
             </Link>
           ))}
         </HStack>
