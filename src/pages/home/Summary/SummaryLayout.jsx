@@ -8,10 +8,16 @@ const SummaryLayout = () => {
     <>
       <EventDetails />
 
-      {/* <Flex gap="16">
+      <Flex
+        gap="16"
+        flexDir={{
+          base: "column",
+          md: "row",
+        }}
+      >
         <EventExtraDetails />
         <EventInviteList />
-      </Flex> */}
+      </Flex>
     </>
   );
 };

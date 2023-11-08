@@ -36,7 +36,15 @@ const EventDetails = () => {
         </HStack>
       </Box>
       <Box flex="1">
-        <Grid placeItems="center" boxSize="full" bg="gray.200" minH="320px">
+        <Grid
+          // w="full"
+          placeItems="center"
+          boxSize="full"
+          bg="gray.200"
+          minW="260px"
+          w="full"
+          minH="320px"
+        >
           <Text> Map Image</Text>
         </Grid>
       </Box>

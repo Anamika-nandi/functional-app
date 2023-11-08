@@ -1,4 +1,4 @@
-import { Box, Heading, Stack, Text, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Grid, Heading, Stack, Text, WrapItem } from "@chakra-ui/react";
 
 const EventInviteList = () => {
   const inviteList = [
@@ -72,11 +72,22 @@ const EventInviteList = () => {
       <Heading my="8" fontSize="2xl">
         Invite List (9)
       </Heading>
-      <Wrap gap="4" justify="space-between">
+      <Grid
+        gap="4"
+        templateColumns={{
+          base: "repeat(3, 1fr)",
+          md: "repeat(3, 1fr)",
+        }}
+        placeItems="center"
+        placeContent="center"
+        maxW={{
+          base: "260px",
+        }}
+      >
         {inviteList.map((invite, i) => (
           <WrapItem key={i}>
             <Stack>
-              <Box boxSize="90px" bg="gray.100" />
+              <Box boxSize="80px" bg="gray.100" />
               <Box>
                 <Text fontSize="sm">{invite.firstName}</Text>
                 <Text fontSize="sm" mt="-1">
@@ -86,7 +97,7 @@ const EventInviteList = () => {
             </Stack>
           </WrapItem>
         ))}
-      </Wrap>
+      </Grid>
       <Stack spacing="4" mt="8">
         {inviteMails.map((mail, i) => (
           <Stack key={i} spacing="0">
