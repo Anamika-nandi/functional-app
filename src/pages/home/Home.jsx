@@ -6,9 +6,9 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <RoundLayout>
+      {/* <RoundLayout>
         <PokerTabs />
-      </RoundLayout>
+      </RoundLayout> */}
     </div>
   );
 };

@@ -76,6 +76,7 @@ const Nav = () => {
           base: "block",
           md: "none",
         }}
+        bg="black"
       >
         <HStack h="64px" justify="space-between">
           <Link href="/">
