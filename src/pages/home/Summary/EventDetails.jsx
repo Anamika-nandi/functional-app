@@ -2,7 +2,13 @@ import { Box, Flex, Grid, HStack, Heading, Text } from "@chakra-ui/react";
 
 const EventDetails = () => {
   return (
-    <Flex gap="16">
+    <Flex
+      gap="16"
+      flexDir={{
+        base: "column",
+        md: "row",
+      }}
+    >
       <Box flex="3">
         <Heading fontSize="2xl">Name of the event</Heading>
         <Text fontSize="sm" fontWeight="medium" color="gray.600">
@@ -30,7 +36,7 @@ const EventDetails = () => {
         </HStack>
       </Box>
       <Box flex="1">
-        <Grid placeItems="center" boxSize="full" bg="gray.200">
+        <Grid placeItems="center" boxSize="full" bg="gray.200" minH="320px">
           <Text> Map Image</Text>
         </Grid>
       </Box>
